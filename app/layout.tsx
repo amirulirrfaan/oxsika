@@ -1,15 +1,16 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
-import { ThemeProvider } from '@/components/theme-provider';
-import Navbar from '@/components/navbar';
-import Footer from '@/components/footer';
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
+import { ThemeProvider } from "@/components/theme-provider";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Oxsika Alumni Association - SBPI Kubang Pasu',
-  description: 'Official website of Oxsika Alumni Association from SBPI Kubang Pasu',
+  title: "Oxsika Alumni Association - SBPI Kubang Pasu",
+  description:
+    "Official website of Oxsika Alumni Association from SBPI Kubang Pasu",
 };
 
 export default function RootLayout({
@@ -22,7 +23,7 @@ export default function RootLayout({
       <body className={`${inter.className} min-h-screen flex flex-col`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
