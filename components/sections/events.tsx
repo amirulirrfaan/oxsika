@@ -16,7 +16,14 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Pagination } from "@/components/ui/pagination";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
 import { Calendar, Clock, MapPin } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
@@ -143,6 +150,14 @@ export default function Events() {
     currentPage * eventsPerPage
   );
 
+  const handlePageChange = (page: number, event: React.MouseEvent) => {
+    event.preventDefault(); // Prevent default anchor behavior (scrolling/reloading)
+
+    if (page > 0 && page <= totalPages) {
+      setCurrentPage(page);
+    }
+  };
+
   return (
     <section id="events" className="py-20 bg-secondary">
       <div className="container">
@@ -232,11 +247,33 @@ export default function Events() {
         </div>
 
         <div className="mt-8 flex justify-center">
-          <Pagination
-            totalPages={totalPages}
-            currentPage={currentPage}
-            onPageChange={setCurrentPage}
-          />
+          <Pagination>
+            <PaginationContent>
+              <PaginationItem>
+                <PaginationPrevious
+                  href="#"
+                  onClick={(event) => handlePageChange(currentPage - 1, event)}
+                />
+              </PaginationItem>
+              {Array.from({ length: totalPages }).map((_, index) => (
+                <PaginationItem key={index}>
+                  <PaginationLink
+                    href="#"
+                    isActive={currentPage === index + 1}
+                    onClick={(event) => handlePageChange(index + 1, event)}
+                  >
+                    {index + 1}
+                  </PaginationLink>
+                </PaginationItem>
+              ))}
+              <PaginationItem>
+                <PaginationNext
+                  href="#"
+                  onClick={(event) => handlePageChange(currentPage + 1, event)}
+                />
+              </PaginationItem>
+            </PaginationContent>
+          </Pagination>
         </div>
       </div>
     </section>

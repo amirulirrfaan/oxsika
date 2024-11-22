@@ -1,9 +1,10 @@
 import About from "@/components/sections/about";
+import { CommitteeSection } from "@/components/sections/comittee";
 import Events from "@/components/sections/events";
+import Gallery from "@/components/sections/gallery";
 import Hero from "@/components/sections/hero";
 import Merchandise from "@/components/sections/merchandise";
 import News from "@/components/sections/news";
-import { CommitteeSection } from "./committee/page";
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
       <News />
       {/* <AlumniDirectory /> */}
       <Merchandise />
-      {/* <Gallery /> */}
+      <Gallery />
     </div>
   );
 }

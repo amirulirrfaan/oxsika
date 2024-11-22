@@ -9,7 +9,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Pagination } from "@/components/ui/pagination";
 import { ShoppingCart, Tag } from "lucide-react";
 import { useState } from "react";
 
@@ -128,14 +127,6 @@ export default function Merchandise() {
               </CardFooter>
             </Card>
           ))}
-        </div>
-
-        <div className="mt-8 flex justify-center">
-          <Pagination
-            currentPage={currentPage}
-            totalPages={totalPages}
-            onPageChange={setCurrentPage}
-          />
         </div>
       </div>
     </section>

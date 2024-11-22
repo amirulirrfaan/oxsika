@@ -283,11 +283,7 @@ export default function AlumniDirectory() {
         </div>
 
         <div className="mt-8 flex justify-center">
-          <Pagination
-            currentPage={currentPage}
-            totalPages={totalPages}
-            onPageChange={setCurrentPage}
-          />
+          <Pagination />
         </div>
       </div>
     </section>

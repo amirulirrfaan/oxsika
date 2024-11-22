@@ -2,7 +2,15 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { Pagination } from "@/components/ui/pagination";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
 import { Calendar, MapPin } from "lucide-react";
 import { useState } from "react";
 
@@ -39,6 +47,46 @@ const galleryItems = [
     description:
       "Annual sports competition between current students and alumni teams.",
   },
+  {
+    id: 1,
+    title: "Gegar 2024",
+    date: "2024-09-15",
+    location: "SBPI Kubang Pasu",
+    category: "Events",
+    image: "/assets/images/gallery1.png",
+    description:
+      "A memorable gathering of alumni from various batches celebrating our shared heritage.",
+  },
+  {
+    id: 1,
+    title: "Gegar 2024",
+    date: "2024-09-15",
+    location: "SBPI Kubang Pasu",
+    category: "Events",
+    image: "/assets/images/gallery1.png",
+    description:
+      "A memorable gathering of alumni from various batches celebrating our shared heritage.",
+  },
+  {
+    id: 1,
+    title: "Gegar 2024",
+    date: "2024-09-15",
+    location: "SBPI Kubang Pasu",
+    category: "Events",
+    image: "/assets/images/gallery1.png",
+    description:
+      "A memorable gathering of alumni from various batches celebrating our shared heritage.",
+  },
+  {
+    id: 1,
+    title: "Gegar 2024",
+    date: "2024-09-15",
+    location: "SBPI Kubang Pasu",
+    category: "Events",
+    image: "/assets/images/gallery1.png",
+    description:
+      "A memorable gathering of alumni from various batches celebrating our shared heritage.",
+  },
 ];
 
 export default function Gallery() {
@@ -57,10 +105,10 @@ export default function Gallery() {
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Photo Gallery
+            Galeri
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Capturing moments and memories from our alumni community
+            #KembalikanKenangan
           </p>
         </div>
 
@@ -138,11 +186,35 @@ export default function Gallery() {
         </Dialog>
 
         <div className="mt-8 flex justify-center">
-          <Pagination
-            currentPage={currentPage}
-            totalPages={totalPages}
-            onPageChange={setCurrentPage}
-          />
+          <Pagination>
+            <PaginationContent>
+              <PaginationItem>
+                <PaginationPrevious
+                  href={`#${currentPage > 1 ? currentPage - 1 : 1}`}
+                />
+              </PaginationItem>
+              {[...Array(totalPages)].map((_, index) => (
+                <PaginationItem key={index}>
+                  <PaginationLink
+                    href={`#${index + 1}`}
+                    onClick={() => setCurrentPage(index + 1)}
+                  >
+                    {index + 1}
+                  </PaginationLink>
+                </PaginationItem>
+              ))}
+              <PaginationItem>
+                <PaginationEllipsis />
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationNext
+                  href={`#${
+                    currentPage < totalPages ? currentPage + 1 : totalPages
+                  }`}
+                />
+              </PaginationItem>
+            </PaginationContent>
+          </Pagination>
         </div>
       </div>
     </section>

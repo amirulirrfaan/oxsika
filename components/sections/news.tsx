@@ -1,5 +1,4 @@
 "use client";
-
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -15,7 +14,14 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Pagination } from "@/components/ui/pagination";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
 import { CalendarDays } from "lucide-react";
 import { useState } from "react";
 
@@ -89,8 +95,11 @@ const news = [
 export default function News() {
   const [currentPage, setCurrentPage] = useState(1);
   const newsPerPage = 3;
+
+  // Calculate the total number of pages based on the total number of items
   const totalPages = Math.ceil(news.length / newsPerPage);
 
+  // Slice the news array based on the current page
   const paginatedNews = news.slice(
     (currentPage - 1) * newsPerPage,
     currentPage * newsPerPage
@@ -156,11 +165,42 @@ export default function News() {
         </div>
 
         <div className="mt-8 flex justify-center">
-          <Pagination
-            currentPage={currentPage}
-            totalPages={totalPages}
-            onPageChange={setCurrentPage}
-          />
+          <Pagination>
+            <PaginationContent>
+              <PaginationItem>
+                <PaginationPrevious
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setCurrentPage((prev) => Math.max(prev - 1, 1));
+                  }}
+                />
+              </PaginationItem>
+              {[...Array(totalPages)].map((_, index) => (
+                <PaginationItem key={index + 1}>
+                  <PaginationLink
+                    href="#"
+                    isActive={currentPage === index + 1}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setCurrentPage(index + 1);
+                    }}
+                  >
+                    {index + 1}
+                  </PaginationLink>
+                </PaginationItem>
+              ))}
+              <PaginationItem>
+                <PaginationNext
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setCurrentPage((prev) => Math.min(prev + 1, totalPages));
+                  }}
+                />
+              </PaginationItem>
+            </PaginationContent>
+          </Pagination>
         </div>
       </div>
     </section>
