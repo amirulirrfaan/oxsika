@@ -36,57 +36,6 @@ const galleryItems = [
     description:
       "Alumni-led career fair providing guidance to current students and recent graduates.",
   },
-  {
-    id: 3,
-    title: "Sports Day 2023",
-    date: "2023-07-08",
-    location: "School Sports Complex",
-    category: "Sports",
-    image:
-      "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&auto=format&fit=crop&q=60",
-    description:
-      "Annual sports competition between current students and alumni teams.",
-  },
-  {
-    id: 1,
-    title: "Gegar 2024",
-    date: "2024-09-15",
-    location: "SBPI Kubang Pasu",
-    category: "Events",
-    image: "/assets/images/gallery1.png",
-    description:
-      "A memorable gathering of alumni from various batches celebrating our shared heritage.",
-  },
-  {
-    id: 1,
-    title: "Gegar 2024",
-    date: "2024-09-15",
-    location: "SBPI Kubang Pasu",
-    category: "Events",
-    image: "/assets/images/gallery1.png",
-    description:
-      "A memorable gathering of alumni from various batches celebrating our shared heritage.",
-  },
-  {
-    id: 1,
-    title: "Gegar 2024",
-    date: "2024-09-15",
-    location: "SBPI Kubang Pasu",
-    category: "Events",
-    image: "/assets/images/gallery1.png",
-    description:
-      "A memorable gathering of alumni from various batches celebrating our shared heritage.",
-  },
-  {
-    id: 1,
-    title: "Gegar 2024",
-    date: "2024-09-15",
-    location: "SBPI Kubang Pasu",
-    category: "Events",
-    image: "/assets/images/gallery1.png",
-    description:
-      "A memorable gathering of alumni from various batches celebrating our shared heritage.",
-  },
 ];
 
 export default function Gallery() {
@@ -132,7 +81,7 @@ export default function Gallery() {
                 </h3>
                 <div className="flex items-center gap-2 text-white/80 text-sm mt-2">
                   <Calendar className="h-4 w-4" />
-                  <span>{new Date(item.date).toLocaleDateString()}</span>
+                  <span>{item.date}</span>
                 </div>
                 <div className="flex items-center gap-2 text-white/80 text-sm">
                   <MapPin className="h-4 w-4" />

@@ -12,40 +12,40 @@ import {
 const committees = [
   {
     name: "Abdul Hadi",
-    role: "President",
-    email: "john.doe@example.com",
+    role: "Presiden",
+    email: "hadi@gmail.com",
     phone: "+60 12-345 6789",
     image:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&auto=format&fit=crop&q=60",
   },
   {
     name: "Umairah",
-    role: "Vice President",
-    email: "jane.smith@example.com",
+    role: "Naib Presiden",
+    email: "umairah@gmail.com",
     phone: "+60 12-987 6543",
     image:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&auto=format&fit=crop&q=60",
   },
   {
     name: "Emeir Khalif",
-    role: "Vice President",
-    email: "jane.smith@example.com",
+    role: "Bendahari",
+    email: "emeir@gmail.com",
     phone: "+60 12-987 6543",
     image:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&auto=format&fit=crop&q=60",
   },
   {
     name: "Ammar Izzudin",
-    role: "Vice President",
-    email: "jane.smith@example.com",
+    role: "AJK",
+    email: "ammar@gmail.com",
     phone: "+60 12-987 6543",
     image:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&auto=format&fit=crop&q=60",
   },
   {
-    name: "Jane Smith",
-    role: "Vice President",
-    email: "jane.smith@example.com",
+    name: "Syazwan Razman",
+    role: "AJK",
+    email: "zen@gmail.com",
     phone: "+60 12-987 6543",
     image:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&auto=format&fit=crop&q=60",

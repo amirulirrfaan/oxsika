@@ -112,10 +112,10 @@ export default function News() {
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             Berita Oxsika
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          {/* <p className="mt-4 text-lg text-muted-foreground">
             Stay updated with the latest news and achievements from our alumni
             community
-          </p>
+          </p> */}
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -129,7 +129,7 @@ export default function News() {
               <CardHeader>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
                   <CalendarDays className="h-4 w-4" />
-                  <span>{new Date(item.date).toLocaleDateString()}</span>
+                  <span>{item.date}</span>
                 </div>
                 <CardTitle className="line-clamp-2">{item.title}</CardTitle>
                 <CardDescription>{item.summary}</CardDescription>
@@ -153,7 +153,7 @@ export default function News() {
                       />
                       <div className="flex items-center gap-2 text-sm text-muted-foreground">
                         <CalendarDays className="h-4 w-4" />
-                        <span>{new Date(item.date).toLocaleDateString()}</span>
+                        <span>{item.date}</span>
                       </div>
                       <p className="text-muted-foreground">{item.content}</p>
                     </div>

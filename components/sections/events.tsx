@@ -32,7 +32,7 @@ const events = [
   {
     id: 1,
     title: "Gegar 2024",
-    date: "2024-06-15",
+    date: "2024-07-20",
     time: "14:00",
     location: "SBPI Kubang Pasu Main Hall",
     description:
@@ -82,61 +82,7 @@ const events = [
     image:
       "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop&q=60",
   },
-  {
-    id: 6,
-    title: "Charity Run for a Cause",
-    date: "2024-10-12",
-    time: "07:30",
-    location: "Alor Setar City Park",
-    description:
-      "Join us for a charity run and support a cause close to our hearts.",
-    image:
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop&q=60",
-  },
-  {
-    id: 7,
-    title: "Alumni Picnic and BBQ",
-    date: "2024-11-25",
-    time: "12:00",
-    location: "Beachside Park, Alor Setar",
-    description:
-      "Relax and socialize at our annual alumni picnic with a BBQ feast.",
-    image:
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop&q=60",
-  },
-  {
-    id: 8,
-    title: "Leadership Summit 2024",
-    date: "2024-12-05",
-    time: "08:00",
-    location: "Grand Alor Setar Hotel",
-    description:
-      "A summit to discuss leadership skills, networking, and professional growth.",
-    image:
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop&q=60",
-  },
-  {
-    id: 9,
-    title: "Yoga for Wellness",
-    date: "2024-12-10",
-    time: "06:00",
-    location: "SBPI Kubang Pasu Gymnasium",
-    description:
-      "Join us for a morning of relaxation and wellness through yoga.",
-    image:
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop&q=60",
-  },
-  {
-    id: 10,
-    title: "Holiday Party 2024",
-    date: "2024-12-20",
-    time: "19:00",
-    location: "Alor Setar Convention Center",
-    description:
-      "Celebrate the holidays with fellow alumni in a festive gathering.",
-    image:
-      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&auto=format&fit=crop&q=60",
-  },
+
   // Add more events as needed
 ];
 
@@ -165,9 +111,9 @@ export default function Events() {
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             Program
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          {/* <p className="mt-4 text-lg text-muted-foreground">
             Stay connected with the latest alumni gatherings and activities
-          </p>
+          </p> */}
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -185,7 +131,7 @@ export default function Events() {
                 <CardDescription>
                   <div className="flex items-center gap-2 mt-2">
                     <Calendar className="h-4 w-4" />
-                    <span>{new Date(event.date).toLocaleDateString()}</span>
+                    <span>{event.date}</span>
                   </div>
                   <div className="flex items-center gap-2 mt-1">
                     <Clock className="h-4 w-4" />
@@ -225,9 +171,7 @@ export default function Events() {
                         </p>
                         <div className="flex items-center gap-2">
                           <Calendar className="h-4 w-4" />
-                          <span>
-                            {new Date(event.date).toLocaleDateString()}
-                          </span>
+                          <span>{event.date}</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <Clock className="h-4 w-4" />

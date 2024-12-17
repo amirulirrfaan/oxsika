@@ -1,4 +1,3 @@
-import About from "@/components/sections/about";
 import { CommitteeSection } from "@/components/sections/comittee";
 import Events from "@/components/sections/events";
 import Gallery from "@/components/sections/gallery";
@@ -10,7 +9,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Hero />
-      <About />
+      {/* <About /> */}
       <CommitteeSection />
       {/* <Features /> */}
       <Events />

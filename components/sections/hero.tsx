@@ -9,10 +9,10 @@ export default function Hero() {
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: 'url("/assets/images/ikups.png")' }}
       />
-      <div className="absolute inset-0 bg-black/40" />{" "}
-      {/* Overlay with 40% opacity */}
+      <div className="absolute inset-0 bg-black/60" />{" "}
+      {/* Overlay with 60% opacity */}
       <div className="container relative z-10 flex items-center justify-center h-full">
-        <div className="text-center space-y-8 max-w-2xl px-4">
+        <div className="text-center space-y-8  px-4">
           {/* Animated Heading */}
           <motion.h1
             className="text-5xl font-bold text-white tracking-tighter sm:text-6xl md:text-7xl italic"
@@ -25,7 +25,7 @@ export default function Hero() {
 
           {/* Animated Paragraph */}
           <motion.p
-            className="text-white md:text-xl text-lg"
+            className="text-white md:text-xl text-lg mx-auto max-w-2xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1, ease: "easeOut" }}

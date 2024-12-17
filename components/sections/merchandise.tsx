@@ -65,9 +65,9 @@ export default function Merchandise() {
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
             Alumni Merchandise
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          {/* <p className="mt-4 text-lg text-muted-foreground">
             Show your Oxsika pride with our exclusive collection
-          </p>
+          </p> */}
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
